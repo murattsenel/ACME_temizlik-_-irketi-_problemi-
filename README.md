@@ -9,6 +9,8 @@ geriye 11 işçi kalacağından iterasyon son bulur ve kidemlilerin yer değişt
 
 Bu işçileri her biri bir kere çalışmak üzere nasıl dağıtılacak
 her işçinin çalışması için boşta kalan 11 işçi nasıl iş planına alınacak
+işçilerin isimleri uzun karakterler bunlar nasıl yazdıralacak
+
 
 çözüm bulduklarım
 
