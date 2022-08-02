@@ -19,6 +19,9 @@ işçileri doğru biçimde şirketlere yerleştirmek için her şirket adına di
 
 kıdemli işçileri 9 firma arasında atama yapmak için 2lik sayı sistemi mantığı kullanılacak kıdemli işçiler bir basamak kaydıralacak
 işçilerin adının ekrana yazdırılması enum tipi kullanılarak çözüldü
+işçileri uygun biçimde tek bir şirket dizisine yerleştirebildim
+kod çok uzun olmaya başladı kodları funcsiyon haline getirince geri dönüş değeri alamıyorum.
+
 
 
 DENENECEKLER
