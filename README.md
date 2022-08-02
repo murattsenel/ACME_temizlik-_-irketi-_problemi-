@@ -10,12 +10,23 @@ kıdemli işçiler nasıl bir basamak kaydırılacak*** ÇÖZÜLDÜ
 Bu işçileri her biri bir kere çalışmak üzere nasıl dağıtılacak
 her işçinin çalışması için boşta kalan 11 işçi nasıl iş planına alınacak
 işçilerin isimleri uzun karakterler bunlar nasıl yazdıralacak *** ÇÖZÜLDÜ
+işçileri doğru biçimde şirketlere yerleştirmek için her şirket adına dizi açılacak
+
+
 
 
 çözüm bulduklarım
 
 kıdemli işçileri 9 firma arasında atama yapmak için 2lik sayı sistemi mantığı kullanılacak kıdemli işçiler bir basamak kaydıralacak
 işçilerin adının ekrana yazdırılması enum tipi kullanılarak çözüldü
+
+
+DENENECEKLER
+
+İşçileri tablo yapmadan önce her şirket için bir dizi oluşturacak ve işçiler bu dizilere istenilen kurallarda yerleştirilecek.
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
