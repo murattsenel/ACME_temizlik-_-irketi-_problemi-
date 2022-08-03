@@ -8,9 +8,9 @@ geriye 11 işçi kalacağından iterasyon son bulur ve kidemlilerin yer değişt
 Çözmem gerekenler 
 kıdemli işçiler nasıl bir basamak kaydırılacak*** ÇÖZÜLDÜ
 Bu işçileri her biri bir kere çalışmak üzere nasıl dağıtılacak
-her işçinin çalışması için boşta kalan 11 işçi nasıl iş planına alınacak
+her işçinin çalışması için boşta kalan 11 işçi nasıl iş planına alınacak***ÇÖZÜLDÜ
 işçilerin isimleri uzun karakterler bunlar nasıl yazdıralacak *** ÇÖZÜLDÜ
-işçileri doğru biçimde şirketlere yerleştirmek için her şirket adına dizi açılacak
+işçileri doğru biçimde şirketlere yerleştirmek için her şirket adına dizi açılacak***çözüldü
 
 
 
@@ -26,7 +26,7 @@ kod çok uzun olmaya başladı kodları funcsiyon haline getirince geri dönüş
 
 DENENECEKLER
 
-İşçileri tablo yapmadan önce her şirket için bir dizi oluşturacak ve işçiler bu dizilere istenilen kurallarda yerleştirilecek.
+İşçileri tablo yapmadan önce her şirket için bir dizi oluşturacak ve işçiler bu dizilere istenilen kurallarda yerleştirilecek. Çözüldü.
 
 
 
