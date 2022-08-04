@@ -1,7 +1,7 @@
 #include <stdio.h>
 int count =0;
-int count2 =0;
-int iterasyon =0;              /* while icindeki count2 max isci iterasyonunu kontrol ediyor.*/
+int iteration_count =0;                  
+int iteration =0;              
 int isci_deger_tutucu=0;
 int kidemli_deger_tutucu=0;
 
@@ -15,14 +15,8 @@ int f_sirketi[5];
 int g_sirketi[5];
 int h_sirketi[5];
 int j_sirketi[5];
+// isci adlarini ekrana yazdirabilmek icin isimleri sayiya cevirdim.
 
-
-
-
-main() {
-	
-	// isci adlarini ekrana yazdirabilmek icin isimleri sayiya cevirdim.
-	
 enum isciler {W_1,W_2,W_3,W_4,W_5,W_6,W_7,W_8,W_9,W_10,W_11,W_12,W_13,W_14,W_15,W_16,W_17,W_18,W_19,W_20,W_21,W_22,W_23,W_24,W_25,W_26,W_27,W_28,
 W_29,W_30,W_31,W_32,W_33,W_34,W_35,W_36,W_37,W_38,W_39,W_40,W_41,W_42,W_43,W_44,W_45,W_46,W_47};
 
@@ -41,197 +35,201 @@ enum kidemli_isci kidemli;
 
 char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW_9","LW_10"};
 
+
+
+main() {
+	
+
+
    
    
     
-   kidemli=LW_1;
-     isci=W_1;
-      kidemli_deger_tutucu=kidemli;
-      isci_deger_tutucu=isci;
+      kidemli=LW_1;    
+      isci=W_1;
+      kidemli_deger_tutucu=kidemli;    // fonksiyona ilk giris degeri tutuyor
+      isci_deger_tutucu=isci;          // fonksiyona ilk giris degeri tutuyor
       
+      printf(" \n                          ACME TEMIZLIK SIRKETI ISCI OTOMASYONU\n\n");
       printf("lutfen istediginiz iterasyon adetini giriniz = ");
    
-  scanf("%d",&iterasyon);
-    while(count2<iterasyon) // istenilen iterasyon adeti kadar tablo üretiyor
+   scanf("%d",&iteration);
+    while(iteration_count<iteration) // istenilen iterasyon adeti kadar tablo Ã¼retiyor
     {
-    	count2++;
+    	iteration_count++;
     	kidemli=kidemli_deger_tutucu;
      	isci=isci_deger_tutucu;
      	
    	    
    //sirket A icin isci yerlestirme 
    
-  for(count=0;count<1;count++)// count kullanilmasinin nedeni iscilerin her zaman degisecek olmasi
-   {
-   	 a_sirketi[count]=kidemli;
-   	  kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
-     for(count=1;count<5;count++)
-   {
+  // count kullanilmasinin nedeni iscilerin her zaman degisecek olmasi
+   
+   	a_sirketi[0]=kidemli;
+   	kidemli++;
+   	if(kidemli>8)
+   	kidemli=0;
+    for(count=1;count<5;count++)
+  	{
    	
-   	 a_sirketi[count]=isci;
-   	 isci++;
+   	 	a_sirketi[count]=isci;
+   	 	isci++;
    	 
-   	// dizide 47 eleman oldugu için dizi  boyutu asildiginda dizi ilk elemana geri donuyor.
-   	 if(isci>46)
-   	 isci=0;
+   	// dizide 47 eleman oldugu iÃ§in dizi  boyutu asildiginda dizi ilk elemana geri donuyor.
+   	 	if(isci>46)
+   		 isci=0;
 
-   }
-   }
+   	}
+   
 
  //////////////////////////////////////////// B sirketi isci atamasi
-    for(count=0;count<1;count++)
-   {
-   	 b_sirketi[count]=kidemli;
-   	  kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
-     for(count=1;count<5;count++)
-   {
+   
+   
+   	b_sirketi[0]=kidemli;
+   	kidemli++;
+   	if(kidemli>8)
+   	kidemli=0;
+    for(count=1;count<5;count++)
+    {
    	
-   	 b_sirketi[count]=isci;
-   	 isci++;
-     if(isci>46)
-   	 isci=0;
-   }
-   }
+   	    b_sirketi[count]=isci;
+   	    isci++;
+        if(isci>46)
+   	    isci=0;
+    }
+   
    
    //////////////////////////////////////// C sirketi isci atamasi
     for(count=0;count<2;count++)
    {
-   	 c_sirketi[count]=kidemli;
-   	  kidemli++;
-   }    if(kidemli>8)
+   	    c_sirketi[count]=kidemli;
+   	    kidemli++;
+   	    if(kidemli>8)
    	    kidemli=0;
-     for(count=2;count<14;count++)
-   {
+   	 }   
+		
+         for(count=2;count<14;count++)
+  		 {
    	
-   	 c_sirketi[count]=isci;
-   	 isci++;
-      if(isci>46)
-   	  isci=0;
-   }
+   	    c_sirketi[count]=isci;
+   	    isci++;
+        if(isci>46)
+   	     isci=0;
+  	 }
    
    
    ///////////////////////////////////////////////////// D sirketi isci atamasi
     for(count=0;count<2;count++)
    {
-   	 d_sirketi[count]=kidemli;
-   	  kidemli++;
+   	    d_sirketi[count]=kidemli;
+   	    kidemli++;
    	    if(kidemli>8)
    	    kidemli=0;
    }
      for(count=2;count<8;count++)
    {
    	
-   	 d_sirketi[count]=isci;
-   	 isci++;
-      if(isci>46)
+   	  	d_sirketi[count]=isci;
+   	  	isci++;
+      	if(isci>46)
    	    isci=0;
    }
    
    ///////////////////////////////////////// e sirketi isci atamasi
-      for(count=0;count<1;count++)
-   {
-   	 e_sirketi[count]=kidemli;
-   	  kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
+      
+   
+   	e_sirketi[0]=kidemli;
+   	kidemli++;
+   	if(kidemli>8)
+   	kidemli=0;
      for(count=1;count<4;count++)
    {
    	
-   	 e_sirketi[count]=isci;
-   	 isci++;
-      if(isci>46)
-   	   isci=0;
-   }
+   	 	e_sirketi[count]=isci;
+   	 	isci++;
+      	if(isci>46)
+   	   	isci=0;
    }
    
+   
    ////////////////////////////////////////////////// f sirketi isci atamasi
-      for(count=0;count<1;count++)
-   {
-   	 f_sirketi[count]=kidemli;
-   	  kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
+      
+   
+   	f_sirketi[0]=kidemli;
+   	kidemli++;
+   	if(kidemli>8)
+   	kidemli=0;
    	 
      for(count=1;count<3;count++)
    {
    	
-   	 f_sirketi[count]=isci;
-   	 isci++;
-      if(isci>46)
+   	 	f_sirketi[count]=isci;
+   	 	isci++;
+     	 if(isci>46)
    	    isci=0;
    }
-   }
+   
    /////////////////////////////////////////////////////// G Sirketi isci atamasi
    
-        for(count=0;count<1;count++)
-   {
-   	 g_sirketi[count]=kidemli;
-   	  kidemli++;
-   	     if(kidemli>8)
-   	    kidemli=0;
+        
+   
+   	g_sirketi[0]=kidemli;
+   	kidemli++;
+   	if(kidemli>8)
+   	kidemli=0;
    	 
      for(count=1;count<6;count++)
    {
    	
-   	 g_sirketi[count]=isci;
-   	 isci++;
-     if(isci>46)
-   	 isci=0;
+   	 	g_sirketi[count]=isci;
+   	 	isci++;
+     	if(isci>46)
+   	 	isci=0;
    }
-   }
+   
    ////////////////////////////// h sirketi isci atamasi
-        for(count=0;count<1;count++)
-   {
-   	 h_sirketi[count]=isci;
-   	 isci++;
-   	  if(isci>46)
-   	   isci=0;
-     }
+       
+   
+    h_sirketi[0]=isci;
+   	isci++;
+   	if(isci>46)
+   	isci=0;
+     
    
      //////////////////////////////////////////////////////////// j sirketi isci atamasi
 
-        for(count=0;count<1;count++)
-   {
-   	 j_sirketi[count]=isci;
+   	 j_sirketi[0]=isci;
    	 
-     }
-     
-     
+   	 
       isci_deger_tutucu+=12;  //iscilerin ayni firmada calismamasi icin minumum degismesi gereken sayi
       
       if(isci_deger_tutucu>46) // dizi boyutu asildigi zaman diziyi basa donduruyor
-   	  isci_deger_tutucu-=47;
+   	    isci_deger_tutucu-=47;
    	  
-      if(count2%3==0)        // her 3 iterasyonda kidemli iscilerin 2 birim kaydirilmasi gerekir
-      kidemli_deger_tutucu+=2;
+      if(iteration_count%3==0)        // her 3 iterasyonda kidemli iscilerin 2 birim kaydirilmasi gerekir
+        kidemli_deger_tutucu+=2;
       
       if(kidemli_deger_tutucu>9) // dizi boyutu asildigi zaman diziyi basa donduruyor
    	    kidemli_deger_tutucu-=9;
       
-      
-      
-      printf("\n\n\n\n\n");
-      
-      
-      
-         // tablo olusturma dongusu
-           printf("FIRMALAR |     A     |     B     |     C     |     D     |     E     |     F     |     G     |     H     |     J     |\n");
-           printf("         |___________|___________|___________|___________|___________|___________|___________|___________|___________|\n");
-     for(count=0;count<14;count++)
+	  
+	                           //tablonun baslik olusturulmasi
+	    printf("\n\n\n\n\n");
+        printf("                                                          %d.ITERASYON                                                        \n\n",iteration_count);
+        printf("FIRMALAR |     A     |     B     |     C     |     D     |     E     |     F     |     G     |     H     |     J     |\n");
+        printf("         |___________|___________|___________|___________|___________|___________|___________|___________|___________|\n");
+        
+        
+     for(count=0;count<14;count++)      // tablo olusturma dongusu
      {
      	 
      	 
-     	////////////////////////////////////////////////// A sirketi iscileri tablo olusturma
+     	////////////////////////////////////////////////// A sirketi
      	
-     if(count<5)// sirkete dönderilen eleman sayisi kadar tabloya yazdirilsin.
+     if(count<5)// sirkete dÃ¶nderilen eleman sayisi kadar tabloya yazdirilsin.
      {
 		 
      	  if(count<1)    
-		   {   //sirkete gonderilen kidemliler önce yaziliyor.
+		   {   //sirkete gonderilen kidemliler Ã¶nce yaziliyor.
 		 
 		     if(a_sirketi[count]>8)
 		     printf("         |   %s   ", kidemliad[a_sirketi[count]]); 
@@ -252,7 +250,8 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
      printf("         |           ");
         
         
-         ///////////////////////////////////////////////////// b sirketi
+         ///////////////////////////////////////////////////// B sirketi
+         
         if(count<5)// sirkete gonderilen eleman sayisi kadar tabloya yazdirilsin.
      {
 		 
@@ -278,7 +277,7 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
      printf("|           ");
         
         
-          /////////////////////////////////////////////////////  c sirketi 
+          /////////////////////////////////////////////////////  C sirketi 
     if(count<14)
      {
 		 
@@ -300,11 +299,11 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
           }
         
      }
-     else                   // yazilmayan isciler yerine tabloya bosluk konulmasi.
+     else                   
      printf("|           ");     
         
         
-          /////////////////////////////////////////////////////  d sirketi
+          /////////////////////////////////////////////////////  D sirketi
           
     if(count<8)
      {
@@ -327,11 +326,11 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
           }
         
      }
-     else                   // yazilmayan isciler yerine tabloya bosluk konulmasi.
+     else                   
      printf("|           ");      
         
         
-          //////////////////////////////////////////////////// e sirketi 
+          //////////////////////////////////////////////////// E sirketi 
     if(count<4)
      {
 		 
@@ -353,10 +352,10 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
           }
         
      }
-     else                   // yazilmayan isciler yerine tabloya bosluk konulmasi.
+     else                   
      printf("|           ");     
         
-           //////////////////////////////////////////////// f sirketi
+           //////////////////////////////////////////////// F sirketi
     if(count<3)
      {
 		 
@@ -382,7 +381,7 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
         printf("|           ");
         
         
-          /////////////////////////////////////////////// g sirketi
+          /////////////////////////////////////////////// G sirketi
     if(count<6)
      {
 		 
@@ -407,8 +406,7 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
       	else
         printf("|           ");
         
-        
-   		   //////////////////////////////////////////////  h sirketi
+   		   //////////////////////////////////////////////  H sirketi
    		   
    	 if(count<1)
    	 {
@@ -419,7 +417,9 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
    	 }
    		  else
         printf("|           ");
-   		  //////////////////////////////////////////////////// j sirketi
+        
+   		     //////////////////////////////////////////////////// J sirketi
+   		     
    	if(count<1)
    	 {
 		  if(j_sirketi[count]>8)
@@ -429,15 +429,8 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
    	 }
    		  else
         printf("|           |");	 
-     	
-     	
-     	
-     	
-     	
+
      	printf("\n         |___________|___________|___________|___________|___________|___________|___________|___________|___________|\n");
 	 }
   }  
-  
-	 
-
 }
