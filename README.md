@@ -1,54 +1,53 @@
 # ACME_temizlik-_sirketi-_problemi-
 
-ACME şirketi temizlik hizmeti vermektedir. Temizlik çalışanları her zaman aynı şirkete 
-yönlendirilmemektedir yani rotasyon uygulanmaktadır. Maksimum iterasyon tamamlandığında ise 
-yeni rotasyon başlatılmaktadır. Ayrıca her şirket’e bir Kıdemli İşçi atanmaktadır. Kıdemli işçiler, temizlik 
-işçilerini yönlendirmekte ve çalıştırmaktadırlar. Kıdemli işçiler, işçilerin maksimum iterasyonu
-(rotasyon) tamamlanana kadar ilk seçildikleri şirkette devam etmektedir. Her firmanın kendine has 
-farklı işleri vardır, bu neden ile işçi ve kıdemli işçiler arasında haksızlığı önlemek için rastgele dağıtılması 
+ACME sirketi temizlik hizmeti vermektedir. Temizlik calisanlari her zaman ayni sirkete 
+yönlendirilmemektedir yani rotasyon uygulanmaktadir. Maksimum iterasyon tamamlandiğinda ise 
+yeni rotasyon baslatilmaktadir. Ayrica her sirket’e bir Kidemli İsci atanmaktadir. Kidemli isciler, temizlik 
+iscilerini yönlendirmekte ve calistirmaktadirlar. Kidemli isciler, iscilerin maksimum iterasyonu
+(rotasyon) tamamlanana kadar ilk secildikleri sirkette devam etmektedir. Her firmanin kendine has 
+farkli isleri vardir, bu neden ile isci ve kidemli isciler arasinda haksizliği önlemek icin rastgele dağitilmasi 
 gerekmektedir.
 
-ACME temizlik şirketi 57 temizlik işçisine sahiptir. 57 temizlik işçisinden 10 ‘u kıdemli işçilerdir. ACME, 
-9 adet firmaya hizmet vermektedir. Her firma kendi talebi kadar işçi almaktadır.
+ACME temizlik sirketi 57 temizlik iscisine sahiptir. 57 temizlik iscisinden 10 ‘u kidemli iscilerdir. ACME, 
+9 adet firmaya hizmet vermektedir. Her firma kendi talebi kadar isci almaktadir.
 
-• İşçiler firmalar arasında rotasyonda olmalıdır.
-• İşçiler maksimum iterasyon dolana kadar aynı firma da görev yapamamaktadır.
-• Kıdemli işçiler, işçilerin maksimum iterasyonu dolana kadar aynı firma da görev yapmalıdır.
-• Kıdemli işçiler rastgele firmalara dağıtılmalıdı
+• İsciler firmalar arasinda rotasyonda olmalidir.
+• İsciler maksimum iterasyon dolana kadar ayni firma da görev yapamamaktadir.
+• Kidemli isciler, iscilerin maksimum iterasyonu dolana kadar ayni firma da görev yapmalidir.
+• Kidemli isciler rastgele firmalara dağitilmalidi
 //////////////////////////////////////////////////////////////////////////////////////////
 
-Her rotasyonda 10 adet işçi çalışmıyor.Bunların 1'i kıdemli 9'u normal işçidir.
-A firmasında 1 kıdemli 4 işçi
-B firmasında 1 kıdemli 4 işçi
-C firmasında 2 kıdemli 12 işçi
-D firmasında 2 kıdemli 6 işçi
-E firmasında 1 kıdemli 3 işçi
-F firmasında 1 kıdemli 2 işçi
-G firmasında 1 kıdemli 5 işçi
-H firmasında 1 işçi
-J firmasında 1 işçi
+Her rotasyonda 10 adet isci calismiyor.Bunlarin 1'i kidemli 9'u normal iscidir.
+A firmasinda 1 kidemli 4 isci
+B firmasinda 1 kidemli 4 isci
+C firmasinda 2 kidemli 12 isci
+D firmasinda 2 kidemli 6 isci
+E firmasinda 1 kidemli 3 isci
+F firmasinda 1 kidemli 2 isci
+G firmasinda 1 kidemli 5 isci
+H firmasinda 1 isci
+J firmasinda 1 isci
 
-Çözmem gerekenler 
-1.İşçilerin kendi aralarındaki maksimim iterasyon nedir.
-2.Kıdemli işçilerin kendi aralarındaki maksimum iterasyon nedir.
-3.İşçiler hangi sırayala nasıl yer değiştirecek
-4.Boşta kalan 10 işçi nasıl yerleştirilecek
-5.Tablo oluşturulurken işçi isimleri nasıl ekrana yazdırılacak.
+cözmem gerekenler 
+1.İscilerin kendi aralarindaki maksimim iterasyon nedir.
+2.Kidemli iscilerin kendi aralarindaki maksimum iterasyon nedir.
+3.İsciler hangi sirayala nasil yer değistirecek
+4.Bosta kalan 10 isci nasil yerlestirilecek
+5.Tablo olusturulurken isci isimleri nasil ekrana yazdirilacak.
 
 
-Çözümler
+cözümler
 
-1.İşçilerin maxsimum iterasyonunu bulmak için en fazla kıdemsiz işçi alan firmaya bakmamız gerekir.
-  C firması her iterasyonda farklı 12 adet kıdemsiz işçi almakta  3 iterasyon sonunda 36 adet işçiyi kullanmış olacaklar
-  4. iterasyon için elimizde 12 adet farklı işçi olması gerekir.bizim 11 adet işçimiz kaldiği için 3 iterasyon kıdemsiz
-  işçilerin maksimum iterasyonu 3.
+1.İscilerin maksimum iterasyonunu bulmak icin en fazla kidemsiz isci alan firmaya bakmamiz gerekir.
+  C firmasi her iterasyonda farkli 12 adet kidemsiz isci almakta  3 iterasyon sonunda 36 adet isciyi kullanmis olacaklar
+  4. iterasyon icin elimizde 12 adet farkli isci olmasi gerekir.bizim 11 adet iscimiz kaldiği icin 3 iterasyon kidemsiz
+  iscilerin maksimum iterasyonu 3.
 
-2.kıdemli işçileride bulmak için aynı yöntemi kullanıcaz.Maksimum 5 iterasyon olur.
+2.kidemli iscileride bulmak icin ayni yöntemi kullanicaz.Maksimum 5 iterasyon olur.
 
-3 ve 4 işçilerin sırasını her iterasyonda 12 birim arttırmamız gereklidir. 4.iterasyon sonunda 48 işçi gerekeceği
-için döngüyü bir sonraki işçiden başlatmalıyız.Bu sayede hem hiçbir işçi boşta kalmamış olur.Hemde işçilerin 
-hepsi her firmada eşit sayıda çalışmış olur.
+3 ve 4 iscilerin sirasini her iterasyonda 12 birim arttirmamiz gereklidir. 4.iterasyon sonunda 48 isci gerekeceği
+icin döngüyü bir sonraki isciden baslatmaliyiz.Bu sayede hem hicbir isci bosta kalmamis olur.Hemde iscilerin 
+hepsi her firmada esit sayida calismis olur.
 
-5.İşçi isimlerini  sayı tipine dönüştürüp işlemler yaptım.Daha sonra pointer dizisi yardımıyla sayıya
-karşılık gelen isimi ekrana yazdırdım. 
-
+5.İsci isimlerini  sayi tipine dönüstürüp islemler yaptim.Daha sonra pointer dizisi yardimiyla sayiya
+karsilik gelen isimi ekrana yazdirdim. 
