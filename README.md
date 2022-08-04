@@ -1,7 +1,7 @@
 # ACME_temizlik-_sirketi-_problemi-
 
 ACME sirketi temizlik hizmeti vermektedir. Temizlik calisanlari her zaman ayni sirkete 
-yonlendirilmemektedir yani rotasyon uygulanmaktadir. Maksimum iterasyon tamamlandiginda ise 
+yonlendirilmemektedir yani rotasyon uygulanmaktadir. Maksimum iterasyon tamamlandiginda ise  
 yeni rotasyon baslatilmaktadir. Ayrica her sirket’e bir Kidemli Isci atanmaktadir. Kidemli isciler, temizlik 
 iscilerini yonlendirmekte ve calistirmaktadirlar. Kidemli isciler, iscilerin maksimum iterasyonu
 (rotasyon) tamamlanana kadar ilk secildikleri sirkette devam etmektedir. Her firmanin kendine has 
