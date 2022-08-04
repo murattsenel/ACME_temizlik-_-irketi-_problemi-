@@ -29,11 +29,11 @@ H firmasinda 1 isci
 J firmasinda 1 isci
 
 cözmem gerekenler 
-1.İscilerin kendi aralarindaki maksimim iterasyon nedir.
-2.Kidemli iscilerin kendi aralarindaki maksimum iterasyon nedir.
-3.İsciler hangi sirayala nasil yer değistirecek
-4.Bosta kalan 10 isci nasil yerlestirilecek
-5.Tablo olusturulurken isci isimleri nasil ekrana yazdirilacak.
+1.İscilerin kendi aralarindaki maksimum iterasyonu nedir?
+2.Kidemli iscilerin kendi aralarindaki maksimum iterasyonu nedir?
+3.İsciler hangi sirayla nasil yer değistirecek?
+4.Bosta kalan 10 isci nasil yerlestirilecek?
+5.Tablo olusturulurken isci isimleri nasil ekrana yazdirilacak?
 
 
 cözümler
@@ -41,13 +41,13 @@ cözümler
 1.İscilerin maksimum iterasyonunu bulmak icin en fazla kidemsiz isci alan firmaya bakmamiz gerekir.
   C firmasi her iterasyonda farkli 12 adet kidemsiz isci almakta  3 iterasyon sonunda 36 adet isciyi kullanmis olacaklar
   4. iterasyon icin elimizde 12 adet farkli isci olmasi gerekir.bizim 11 adet iscimiz kaldiği icin 3 iterasyon kidemsiz
-  iscilerin maksimum iterasyonu 3.
+  iscilerin maksimum iterasyonu .
 
-2.kidemli iscileride bulmak icin ayni yöntemi kullanicaz.Maksimum 5 iterasyon olur.
+2.Kidemli iscileride bulmak icin ayni yöntemi kullanicaz.Maksimum 5 iterasyon olur.
 
-3 ve 4 iscilerin sirasini her iterasyonda 12 birim arttirmamiz gereklidir. 4.iterasyon sonunda 48 isci gerekeceği
+3. ve 4. Iscilerin sirasini her iterasyonda 12 birim arttirmamiz gereklidir. 4.iterasyon sonunda 48 isci gerekeceği
 icin döngüyü bir sonraki isciden baslatmaliyiz.Bu sayede hem hicbir isci bosta kalmamis olur.Hemde iscilerin 
 hepsi her firmada esit sayida calismis olur.
 
-5.İsci isimlerini  sayi tipine dönüstürüp islemler yaptim.Daha sonra pointer dizisi yardimiyla sayiya
+5.Isci isimlerini  sayi tipine dönüstürüp islemler yaptim.Daha sonra pointer dizisi yardimiyla sayiya
 karsilik gelen isimi ekrana yazdirdim. 
