@@ -20,7 +20,7 @@ ACME temizlik sirketi 57 temizlik iscisine sahiptir. 57 temizlik iscisinden 10 â
 Her rotasyonda 10 adet isci calismiyor.Bunlarin 1'i kidemli 9'u normal iscidir.
 A firmasinda 1 kidemli 4 isci
 B firmasinda 1 kidemli 4 isci
-C firmasinda 2 kidemli 12 isci
+C firmasinda 2 kidemli 12 isci 
 D firmasinda 2 kidemli 6 isci
 E firmasinda 1 kidemli 3 isci
 F firmasinda 1 kidemli 2 isci
