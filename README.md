@@ -1,34 +1,54 @@
 # ACME_temizlik-_sirketi-_problemi-
-algoritma oluşturmadan önce bilinenler
-47 işçi
-10 kıdemli işçi var
-c firması 12 işçi istiyor 3 iterasyon sonunda c firmasında farklı 36 işçi çalışmış olacaktır
-geriye 11 işçi kalacağından iterasyon son bulur ve kidemlilerin yer değiştirmesi gerekir.
+
+ACME şirketi temizlik hizmeti vermektedir. Temizlik çalışanları her zaman aynı şirkete 
+yönlendirilmemektedir yani rotasyon uygulanmaktadır. Maksimum iterasyon tamamlandığında ise 
+yeni rotasyon başlatılmaktadır. Ayrıca her şirket’e bir Kıdemli İşçi atanmaktadır. Kıdemli işçiler, temizlik 
+işçilerini yönlendirmekte ve çalıştırmaktadırlar. Kıdemli işçiler, işçilerin maksimum iterasyonu
+(rotasyon) tamamlanana kadar ilk seçildikleri şirkette devam etmektedir. Her firmanın kendine has 
+farklı işleri vardır, bu neden ile işçi ve kıdemli işçiler arasında haksızlığı önlemek için rastgele dağıtılması 
+gerekmektedir.
+
+ACME temizlik şirketi 57 temizlik işçisine sahiptir. 57 temizlik işçisinden 10 ‘u kıdemli işçilerdir. ACME, 
+9 adet firmaya hizmet vermektedir. Her firma kendi talebi kadar işçi almaktadır.
+
+• İşçiler firmalar arasında rotasyonda olmalıdır.
+• İşçiler maksimum iterasyon dolana kadar aynı firma da görev yapamamaktadır.
+• Kıdemli işçiler, işçilerin maksimum iterasyonu dolana kadar aynı firma da görev yapmalıdır.
+• Kıdemli işçiler rastgele firmalara dağıtılmalıdı
+//////////////////////////////////////////////////////////////////////////////////////////
+
+Her rotasyonda 10 adet işçi çalışmıyor.Bunların 1'i kıdemli 9'u normal işçidir.
+A firmasında 1 kıdemli 4 işçi
+B firmasında 1 kıdemli 4 işçi
+C firmasında 2 kıdemli 12 işçi
+D firmasında 2 kıdemli 6 işçi
+E firmasında 1 kıdemli 3 işçi
+F firmasında 1 kıdemli 2 işçi
+G firmasında 1 kıdemli 5 işçi
+H firmasında 1 işçi
+J firmasında 1 işçi
 
 Çözmem gerekenler 
-kıdemli işçiler nasıl bir basamak kaydırılacak*** ÇÖZÜLDÜ
-Bu işçileri her biri bir kere çalışmak üzere nasıl dağıtılacak*** ÇÖZÜLDÜ
-her işçinin çalışması için boşta kalan 11 işçi nasıl iş planına alınacak*** ÇÖZÜLDÜ
-işçilerin isimleri uzun karakterler bunlar nasıl yazdıralacak *** ÇÖZÜLDÜ
-işçileri doğru biçimde şirketlere yerleştirmek için her şirket adına dizi açılacak*** ÇÖZÜLDÜ
-tablo oluşturulacak.
+1.İşçilerin kendi aralarındaki maksimim iterasyon nedir.
+2.Kıdemli işçilerin kendi aralarındaki maksimum iterasyon nedir.
+3.İşçiler hangi sırayala nasıl yer değiştirecek
+4.Boşta kalan 10 işçi nasıl yerleştirilecek
+5.Tablo oluşturulurken işçi isimleri nasıl ekrana yazdırılacak.
 
 
+Çözümler
 
+1.İşçilerin maxsimum iterasyonunu bulmak için en fazla kıdemsiz işçi alan firmaya bakmamız gerekir.
+  C firması her iterasyonda farklı 12 adet kıdemsiz işçi almakta  3 iterasyon sonunda 36 adet işçiyi kullanmış olacaklar
+  4. iterasyon için elimizde 12 adet farklı işçi olması gerekir.bizim 11 adet işçimiz kaldiği için 3 iterasyon kıdemsiz
+  işçilerin maksimum iterasyonu 3.
 
-çözüm bulduklarım
+2.kıdemli işçileride bulmak için aynı yöntemi kullanıcaz.Maksimum 5 iterasyon olur.
 
-kıdemli işçileri 9 firma arasında atama yapmak için 2lik sayı sistemi mantığı kullanılacak kıdemli işçiler bir basamak kaydıralacak
-işçilerin adının ekrana yazdırılması enum tipi kullanılarak çözüldü
-işçileri uygun biçimde tek bir şirket dizisine yerleştirebildim
-kod çok uzun olmaya başladı kodları funcsiyon haline getirince geri dönüş değeri alamıyorum.
+3 ve 4 işçilerin sırasını her iterasyonda 12 birim arttırmamız gereklidir. 4.iterasyon sonunda 48 işçi gerekeceği
+için döngüyü bir sonraki işçiden başlatmalıyız.Bu sayede hem hiçbir işçi boşta kalmamış olur.Hemde işçilerin 
+hepsi her firmada eşit sayıda çalışmış olur.
 
-
-
-DENENECEKLER
-
-İşçileri tablo yapmadan önce her şirket için bir dizi oluşturacak ve işçiler bu dizilere istenilen kurallarda yerleştirilecek. Çözüldü.
-
-
-
+5.İşçi isimlerini  sayı tipine dönüştürüp işlemler yaptım.Daha sonra pointer dizisi yardımıyla sayıya
+karşılık gelen isimi ekrana yazdırdım. 
 
