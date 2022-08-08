@@ -7,8 +7,7 @@ int count2 =0;
 int count_tutucu =0;
 int iteration_count =0;                  
 int iteration =0;              
-int isci_deger_tutucu=0;
-int kidemli_deger_tutucu=0;
+
 
 int i;
 int j;
@@ -17,7 +16,8 @@ int j;
 int random_kidemli[10];
 int random_kidemli_tutucu[10];
 int random_isci[47];
-int random_isci_tutucu[47];
+int random_isci_tutucu1[47];
+int random_isci_tutucu2[47];
 int a_sirketi[5];
 int b_sirketi[5];
 int c_sirketi[14];
@@ -54,10 +54,10 @@ srand(time(NULL));
 
 
 
-      kidemli=LW_1;    
+    /*  kidemli=LW_1;    
       isci=W_1;
       kidemli_deger_tutucu=kidemli;    // fonksiyona ilk giris degeri tutuyor
-      isci_deger_tutucu=isci;          // fonksiyona ilk giris degeri tutuyor
+      isci_deger_tutucu=isci;          // fonksiyona ilk giris degeri tutuyor*/
       
       printf(" \n                                             ACME TEMIZLIK SIRKETI ISCI OTOMASYONU\n\n");
       printf("lutfen istediginiz iterasyon adetini giriniz = ");
@@ -77,10 +77,20 @@ srand(time(NULL));
    
    scanf("%d",&iteration);
     
+    	
     while(iteration_count<iteration) // istenilen iterasyon adeti kadar tablo Ã¼retiyor
-    {    
-    bas :
-    printf("megri");
+    {  
+    iteration_count++;
+	i=0;
+    while(i<3)
+    {
+	
+    i++;
+    int random_isci_tutucu1[47];
+    int random_isci_tutucu2[47];
+	
+    kid_don :
+   
     	if(iteration_count%3==0||iteration_count==0) 
     	{
     		
@@ -124,7 +134,7 @@ if(iteration_count%3==0)
   if(random_kidemli[i]==random_kidemli_tutucu[i])
   {
   	count_tutucu=i;
-  	goto bas;
+  	goto kid_don;
   }
    }
    
@@ -137,7 +147,7 @@ if(iteration_count%3==0)
    {
        if(random_kidemli[i]==random_kidemli_tutucu[j])
        {
-  	   goto bas;
+  	   goto kid_don;
   	
        }
    }  
@@ -149,7 +159,7 @@ if(iteration_count%3==0)
    {
        if(random_kidemli[i]==random_kidemli_tutucu[j])
        {
-  	   goto bas;
+  	   goto kid_don;
   	
        }
    }  
@@ -161,19 +171,20 @@ if(iteration_count%3==0)
   if(random_kidemli[i]==random_kidemli_tutucu[i])
   {
   	count_tutucu=i;
-  	goto bas;
+  	goto kid_don;
   }
    }
 
 }
 
 //////////////////////////////////////////////////////////////////////// iscileri rasgele dagıtma
-
-
-for(count=0;count<47;count++)
+   
+ count_tutucu=0;
+ isci_don: 	
+for(count=count_tutucu;count<47;count++)
 	{   
 	
-
+    
 	int random = 0;
     random=rand()%47;
    // printf("| %d  ", random);
@@ -197,7 +208,172 @@ if(count==0)
 		  	
 	  }	
  }
-  
+ 
+ 
+/////////////////////////////////////////////////////////////////  A sirketi işçi araması
+
+ for(j=0;j<4;j++)
+ {
+    for(i=0;i<4;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+        
+   }  
+}
+
+//////////////////////////////////////////////////////////////// B sirketi
+
+for(j=4;j<8;j++)
+ {
+    for(i=4;i<8;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+	   
+   }  
+}
+/////////////////////////////////////////////////////////// C sirketi
+
+//////////////////////////////////////////// D sirketi
+for(j=20;j<26;j++)
+ {
+    for(i=20;i<26;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       
+   }  
+}
+/////////////////////////////////////////////////////////// E sirketi
+for(j=26;j<29;j++)
+ {
+    for(i=26;i<29;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       
+   }  
+}
+////////////////////////////////////////////////////////// F sirketi
+for(j=29;j<31;j++)
+ {
+    for(i=29;i<31;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       
+   }  
+}
+////////////////////////////////////////////////////////// G sirketi
+for(j=31;j<36;j++)
+ {
+    for(i=31;i<36;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+       
+   }  
+}
+//////////////////////////////////////////////////////////// H sirketi
+
+    
+
+       if(random_isci[36]==random_isci_tutucu1[36])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+    
+///////////////////////////////////////////////////////////////////////
+
+ 
+   
+       if(random_isci[37]==random_isci_tutucu1[37])
+       {
+       	count=count_tutucu;
+  	   goto isci_don;
+  	
+       }
+   
+for(j=8;j<20;j++)
+ {
+    for(i=8;i<20;i++)
+   {
+       if(random_isci[i]==random_isci_tutucu1[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don; 	
+       }
+     /* if(random_isci[i]==random_isci_tutucu2[j])
+       {
+       	count=count_tutucu;
+  	   goto isci_don; 	
+       }*/
+       
+   }  
+}
 
 
 
@@ -206,27 +382,32 @@ if(count==0)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  for(count=0;count<10;count++)
+     for(count=0;count<10;count++)
 	 {
 	
     random_kidemli_tutucu[count]=random_kidemli[count];
      }
      
+	 ////////////////////////////////////////////////////////////////
+	 // isciler kendi aralarında en fazla 3 iterasyon kurabilir. Son 3 iterasyonu hafizaya aliyorum.
+	 
+	  
 	 
 	 
+	 
+	  for(count=0;count<47;count++)
+	 {
+	
+    random_isci_tutucu2[count]=random_isci_tutucu1[count];
+     }
+	 
+	 
+	 
+     for(count=0;count<47;count++)
+	 {
+	
+    random_isci_tutucu1[count]=random_isci[count];
+     }	 
 	 
 	 
 	 
@@ -249,9 +430,8 @@ if(count==0)
 	 
 	 
 	  
-    	iteration_count++;
-    	kidemli=kidemli_deger_tutucu;
-     	isci=isci_deger_tutucu;
+    	
+    	
      	
    	    
    //sirket A icin isci yerlestirme 
@@ -259,18 +439,14 @@ if(count==0)
   // count kullanilmasinin nedeni iscilerin her zaman degisecek olmasi
    
    	a_sirketi[0]=random_kidemli[0];
-   	kidemli++;
-   	if(kidemli>8)
-   	kidemli=0;
-    for(count=1;count<5;count++)
+  
+    for(count=0;count<4;count++)
   	{
    	
-   	 	a_sirketi[count]=isci;
-   	 	isci++;
+   	 	a_sirketi[count+1]=random_isci[count];
    	 
-   	// dizide 47 eleman oldugu iÃ§in dizi  boyutu asildiginda dizi ilk elemana geri donuyor.
-   	 	if(isci>46)
-   		 isci=0;
+   	 
+   	
 
    	}
    
@@ -279,16 +455,12 @@ if(count==0)
    
    
    	b_sirketi[0]=random_kidemli[1];
-   	kidemli++;
-   	if(kidemli>8)
-   	kidemli=0;
-    for(count=1;count<5;count++)
+   
+    for(count=4;count<8;count++)
     {
    	
-   	    b_sirketi[count]=isci;
-   	    isci++;
-        if(isci>46)
-   	    isci=0;
+   	    b_sirketi[count-3]=random_isci[count];
+   	    
     }
    
    
@@ -296,18 +468,14 @@ if(count==0)
     for(count=2;count<4;count++)
    {
    	    c_sirketi[count-2]=random_kidemli[count];
-   	    kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
+   	   
    	 }   
 		
-         for(count=2;count<14;count++)
+         for(count=8;count<20;count++)
   		 {
    	
-   	    c_sirketi[count]=isci;
-   	    isci++;
-        if(isci>46)
-   	     isci=0;
+   	    c_sirketi[count-6]=random_isci[count];
+   	 
   	 }
    
    
@@ -315,95 +483,54 @@ if(count==0)
     for(count=4;count<6;count++)
    {
    	    d_sirketi[count-4 ]=random_kidemli[count];
-   	    kidemli++;
-   	    if(kidemli>8)
-   	    kidemli=0;
    }
-     for(count=2;count<8;count++)
-   {
-   	
-   	  	d_sirketi[count]=isci;
-   	  	isci++;
-      	if(isci>46)
-   	    isci=0;
-   }
+         for(count=20;count<26;count++)
+   		{   	
+   	  	d_sirketi[count-18]=random_isci[count];
+
+  		}
    
    ///////////////////////////////////////// e sirketi isci atamasi
       
    
    	e_sirketi[0]=random_kidemli[6];
-   	kidemli++;
-   	if(kidemli>8)
-   	kidemli=0;
-     for(count=1;count<4;count++)
-   {
-   	
-   	 	e_sirketi[count]=isci;
-   	 	isci++;
-      	if(isci>46)
-   	   	isci=0;
-   }
+     for(count=26;count<29;count++)
+   		{
+   	 	e_sirketi[count-25]=random_isci[count];
+  		}
    
    
    ////////////////////////////////////////////////// f sirketi isci atamasi
       
    
    	f_sirketi[0]=random_kidemli[7];
-   	kidemli++;
-   	if(kidemli>8)
-   	kidemli=0;
-   	 
-     for(count=1;count<3;count++)
-   {
-   	
-   	 	f_sirketi[count]=isci;
-   	 	isci++;
-     	 if(isci>46)
-   	    isci=0;
-   }
+     for(count=29;count<31;count++)
+   		{   	
+   	 	f_sirketi[count-28]=random_isci[count];
+   		}
    
    /////////////////////////////////////////////////////// G Sirketi isci atamasi
    
         
    
    	g_sirketi[0]=random_kidemli[8];
-   	kidemli++;
-   	if(kidemli>8)
-   	kidemli=0;
-   	 
-     for(count=1;count<6;count++)
-   {
-   	
-   	 	g_sirketi[count]=isci;
-   	 	isci++;
-     	if(isci>46)
-   	 	isci=0;
+   	  	 
+     for(count=31;count<36;count++)
+   {  	
+   	 	g_sirketi[count-30]=random_isci[count];
+   	 	
    }
    
    ////////////////////////////// h sirketi isci atamasi
-       
-   
-    h_sirketi[0]=isci;
-   	isci++;
-   	if(isci>46)
-   	isci=0;
      
+    h_sirketi[0]=random_isci[36];
    
      //////////////////////////////////////////////////////////// j sirketi isci atamasi
 
-   	 j_sirketi[0]=isci;
+   	 j_sirketi[0]=random_isci[37];
    	 
    	 
-      isci_deger_tutucu+=12;  //iscilerin ayni firmada calismamasi icin minumum degismesi gereken sayi
       
-      if(isci_deger_tutucu>46) // dizi boyutu asildigi zaman diziyi basa donduruyor
-   	    isci_deger_tutucu-=47;
-   	  
-      if(iteration_count%3==0)        // her 3 iterasyonda kidemli iscilerin 2 birim kaydirilmasi gerekir
-        kidemli_deger_tutucu+=2;
-      
-      if(kidemli_deger_tutucu>9) // dizi boyutu asildigi zaman diziyi basa donduruyor
-   	    kidemli_deger_tutucu-=9;
       
 	  
 	                           //tablonun baslik olusturulmasi
@@ -627,4 +754,6 @@ if(count==0)
      	printf("\n         |___________|___________|___________|___________|___________|___________|___________|___________|___________|\n");
 	 }
   }  
+}
+  
 }
