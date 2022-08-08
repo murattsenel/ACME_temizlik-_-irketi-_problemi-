@@ -1,11 +1,23 @@
+#include <conio.h>
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 int count =0;
+int count2 =0;
+int count_tutucu =0;
 int iteration_count =0;                  
 int iteration =0;              
 int isci_deger_tutucu=0;
 int kidemli_deger_tutucu=0;
 
+int i;
+int j;
+
 /*her bir sirket icin dizi olusturdum.*/
+int random_kidemli[10];
+int random_kidemli_tutucu[10];
+int random_isci[47];
+int random_isci_tutucu[47];
 int a_sirketi[5];
 int b_sirketi[5];
 int c_sirketi[14];
@@ -22,9 +34,11 @@ W_29,W_30,W_31,W_32,W_33,W_34,W_35,W_36,W_37,W_38,W_39,W_40,W_41,W_42,W_43,W_44,
 
 enum isciler isci;
 
+ 
+
+
 char *isciad[] = {"W_1","W_2","W_3","W_4","W_5","W_6","W_7","W_8","W_9","W_10","W_11","W_12","W_13","W_14","W_15","W_16","W_17","W_18","W_19","W_20","W_21","W_22","W_23",
 "W_24","W_25","W_26","W_27","W_28","W_29","W_30","W_31","W_32","W_33","W_34","W_35","W_36","W_37","W_38","W_39","W_40","W_41","W_42","W_43","W_44","W_45","W_46","W_47"};
-
 
 
 enum kidemli_isci {LW_1,LW_2,LW_3,LW_4,LW_5,LW_6,LW_7,LW_8,LW_9,LW_10};
@@ -36,23 +50,205 @@ char *kidemliad[] = {"LW_1","LW_2","LW_3","LW_4","LW_5","LW_6","LW_7","LW_8","LW
 
 
 main() {
-	
+srand(time(NULL));
 
 
-   
-   
-    
+
       kidemli=LW_1;    
       isci=W_1;
       kidemli_deger_tutucu=kidemli;    // fonksiyona ilk giris degeri tutuyor
       isci_deger_tutucu=isci;          // fonksiyona ilk giris degeri tutuyor
       
-      printf(" \n                          ACME TEMIZLIK SIRKETI ISCI OTOMASYONU\n\n");
+      printf(" \n                                             ACME TEMIZLIK SIRKETI ISCI OTOMASYONU\n\n");
       printf("lutfen istediginiz iterasyon adetini giriniz = ");
    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    scanf("%d",&iteration);
-    while(iteration_count<iteration) // istenilen iterasyon adeti kadar tablo üretiyor
-    {
+    
+    while(iteration_count<iteration) // istenilen iterasyon adeti kadar tablo Ã¼retiyor
+    {    
+    bas :
+    printf("megri");
+    	if(iteration_count%3==0||iteration_count==0) 
+    	{
+    		
+	
+    	for(count=0;count<10;count++)
+	{   
+	
+
+	int random = 0;
+    random=rand()%10;
+   // printf("| %d  ", random);
+
+if(count==0)
+   {
+     random_kidemli[count]=random;	
+     
+	}
+      for(count2=0;count2<count;count2++)
+      {
+      	if(random_kidemli[count2]==random)
+      	{
+      		count--;
+      		break;
+		  }
+		  else
+		  {
+		  	random_kidemli[count]=random;	
+		  }
+		  	
+	  }
+	 // printf("|   %d    ", random_kidemli[count]);
+ }
+  
+}
+if(iteration_count%3==0) 
+{
+////////////// a ve b şirketi bir sonraki kidemli işçi önceki çalışanla aynı mı diyekontrol ediyor.
+  for(i=0;i<2;i++)
+   {
+  
+  if(random_kidemli[i]==random_kidemli_tutucu[i])
+  {
+  	count_tutucu=i;
+  	goto bas;
+  }
+   }
+   
+   
+   
+   //////////////////////////////////////////// c şirketi kıdemli işçi yerleştirme
+   for(j=2;j<4;j++)
+ {
+    for(i=2;i<4;i++)
+   {
+       if(random_kidemli[i]==random_kidemli_tutucu[j])
+       {
+  	   goto bas;
+  	
+       }
+   }  
+}
+ ////////////////////////////////////////////////////// d sirketi kontrol
+ for(j=4;j<6;j++)
+ {
+    for(i=4;i<6;i++)
+   {
+       if(random_kidemli[i]==random_kidemli_tutucu[j])
+       {
+  	   goto bas;
+  	
+       }
+   }  
+}
+///////////////////////////////////////////////////// e , f ve g sirketi kontol
+ for(i=6;i<9;i++)
+   {
+  
+  if(random_kidemli[i]==random_kidemli_tutucu[i])
+  {
+  	count_tutucu=i;
+  	goto bas;
+  }
+   }
+
+}
+
+//////////////////////////////////////////////////////////////////////// iscileri rasgele dagıtma
+
+
+for(count=0;count<47;count++)
+	{   
+	
+
+	int random = 0;
+    random=rand()%47;
+   // printf("| %d  ", random);
+
+if(count==0)
+   {
+     random_isci[count]=random;	
+     
+	}
+      for(count2=0;count2<count;count2++)
+      {
+      	if(random_isci[count2]==random)
+      	{
+      		count--;
+      		break;
+		  }
+		  else
+		  {
+		  	random_isci[count]=random;	
+		  }
+		  	
+	  }	
+ }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  for(count=0;count<10;count++)
+	 {
+	
+    random_kidemli_tutucu[count]=random_kidemli[count];
+     }
+     
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	  
     	iteration_count++;
     	kidemli=kidemli_deger_tutucu;
      	isci=isci_deger_tutucu;
@@ -62,7 +258,7 @@ main() {
    
   // count kullanilmasinin nedeni iscilerin her zaman degisecek olmasi
    
-   	a_sirketi[0]=kidemli;
+   	a_sirketi[0]=random_kidemli[0];
    	kidemli++;
    	if(kidemli>8)
    	kidemli=0;
@@ -72,7 +268,7 @@ main() {
    	 	a_sirketi[count]=isci;
    	 	isci++;
    	 
-   	// dizide 47 eleman oldugu için dizi  boyutu asildiginda dizi ilk elemana geri donuyor.
+   	// dizide 47 eleman oldugu iÃ§in dizi  boyutu asildiginda dizi ilk elemana geri donuyor.
    	 	if(isci>46)
    		 isci=0;
 
@@ -82,7 +278,7 @@ main() {
  //////////////////////////////////////////// B sirketi isci atamasi
    
    
-   	b_sirketi[0]=kidemli;
+   	b_sirketi[0]=random_kidemli[1];
    	kidemli++;
    	if(kidemli>8)
    	kidemli=0;
@@ -97,9 +293,9 @@ main() {
    
    
    //////////////////////////////////////// C sirketi isci atamasi
-    for(count=0;count<2;count++)
+    for(count=2;count<4;count++)
    {
-   	    c_sirketi[count]=kidemli;
+   	    c_sirketi[count-2]=random_kidemli[count];
    	    kidemli++;
    	    if(kidemli>8)
    	    kidemli=0;
@@ -116,9 +312,9 @@ main() {
    
    
    ///////////////////////////////////////////////////// D sirketi isci atamasi
-    for(count=0;count<2;count++)
+    for(count=4;count<6;count++)
    {
-   	    d_sirketi[count]=kidemli;
+   	    d_sirketi[count-4 ]=random_kidemli[count];
    	    kidemli++;
    	    if(kidemli>8)
    	    kidemli=0;
@@ -135,7 +331,7 @@ main() {
    ///////////////////////////////////////// e sirketi isci atamasi
       
    
-   	e_sirketi[0]=kidemli;
+   	e_sirketi[0]=random_kidemli[6];
    	kidemli++;
    	if(kidemli>8)
    	kidemli=0;
@@ -152,7 +348,7 @@ main() {
    ////////////////////////////////////////////////// f sirketi isci atamasi
       
    
-   	f_sirketi[0]=kidemli;
+   	f_sirketi[0]=random_kidemli[7];
    	kidemli++;
    	if(kidemli>8)
    	kidemli=0;
@@ -170,7 +366,7 @@ main() {
    
         
    
-   	g_sirketi[0]=kidemli;
+   	g_sirketi[0]=random_kidemli[8];
    	kidemli++;
    	if(kidemli>8)
    	kidemli=0;
@@ -223,11 +419,11 @@ main() {
      	 
      	////////////////////////////////////////////////// A sirketi
      	
-     if(count<5)// sirkete dönderilen eleman sayisi kadar tabloya yazdirilsin.
+     if(count<5)// sirkete dÃ¶nderilen eleman sayisi kadar tabloya yazdirilsin.
      {
 		 
      	  if(count<1)    
-		   {   //sirkete gonderilen kidemliler önce yaziliyor.
+		   {   //sirkete gonderilen kidemliler Ã¶nce yaziliyor.
 		 
 		     if(a_sirketi[count]>8)
 		     printf("         |   %s   ", kidemliad[a_sirketi[count]]); 
