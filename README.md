@@ -34,6 +34,8 @@ cozmem gerekenler
 3.Isciler hangi sirayla nasil yer degistirecek?
 4.Bosta kalan 10 isci nasil yerlestirilecek?
 5.Tablo olusturulurken isci isimleri nasil ekrana yazdirilacak?
+6.Yapilan yanlıslar duzeltildi.Ancak performans cok dustu.
+kod yavas oldugu icin calısmıyor.Fonksiyona cevirmem lazım.
 
 
 cozumler
