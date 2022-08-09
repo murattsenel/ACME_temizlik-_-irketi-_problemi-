@@ -7,16 +7,13 @@ int count2 =0;
 int count_tutucu =0;
 int iteration_count =0;                  
 int iteration =0;              
-
-
 int i;
 int j;
-
 /*her bir sirket icin dizi olusturdum.*/
-int random_kidemli[10];
-int random_kidemli_tutucu[10];
-int random_isci[47];
-int random_isci_tutucu1[47];
+int random_kidemli[10];       // rasgele atanan kidemlilerin tutuldugu dizi
+int random_kidemli_tutucu[10];// bir onceki iterasyonda calisan kidemli isciler
+int random_isci[47];          // rasgele atanan iscilerin tutuldugu dizi tutuldugu dizi
+int random_isci_tutucu1[47];  //
 int random_isci_tutucu2[47];
 int a_sirketi[5];
 int b_sirketi[5];
@@ -27,9 +24,8 @@ int f_sirketi[5];
 int g_sirketi[5];
 int h_sirketi[5];
 int j_sirketi[5];
-// isci adlarini ekrana yazdirabilmek icin isimleri sayiya cevirdim.
 
-
+// kidemli ve iscilerin adlarini ekrana yazdirmak icin char * fonksiyonundan yararlandım.
 char *isciad[] = {"W_1","W_2","W_3","W_4","W_5","W_6","W_7","W_8","W_9","W_10","W_11","W_12","W_13","W_14","W_15","W_16","W_17","W_18","W_19","W_20","W_21","W_22","W_23",
 "W_24","W_25","W_26","W_27","W_28","W_29","W_30","W_31","W_32","W_33","W_34","W_35","W_36","W_37","W_38","W_39","W_40","W_41","W_42","W_43","W_44","W_45","W_46","W_47"};
 
@@ -70,11 +66,8 @@ srand(time(NULL));
     while(iteration_count<iteration) // istenilen iterasyon adeti kadar tablo Ã¼retiyor
     {  
     ; // düzeltilecek
-	i=0;
-    
-    i++;
-    int random_isci_tutucu1[47];
-    int random_isci_tutucu2[47];
+
+ 
 	
     kid_don :
    
