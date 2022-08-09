@@ -34,8 +34,12 @@ cozmem gerekenler
 3.Isciler hangi sirayla nasil yer degistirecek?
 4.Bosta kalan 10 isci nasil yerlestirilecek?
 5.Tablo olusturulurken isci isimleri nasil ekrana yazdirilacak?
-6.Yapilan yanlıslar duzeltildi.Ancak performans cok dustu.
-kod yavas oldugu icin calısmıyor.Fonksiyona cevirmem lazım.
+6.Kodu yanlis yazdim.Isciler rasgele dagitalacak.
+7.Rand() fonksiyonu ile dagitim yapilacak ancak bu fonksiyon 
+belli bir aralikta aynı sayısı cok kes uretiyor.Her sayidan 
+bir adet uretmesi lazim.
+8.Isciler uretilen isci dizisinde 2 onceki rotasyondan farkli şirketlerde bulunmali
+9.Butun isterler hazir ancak cok fazla kod ve gereksiz islem oldugu icin yavas calısır veya yazdirmiyor.
 
 
 cozumler
@@ -53,3 +57,11 @@ hepsi her firmada esit sayida calismis olur.
 
 5.Isci isimlerini  sayi tipine donusturup islemler yaptim.Daha sonra pointer dizisi yardimiyla sayiya
 karsilik gelen isimi ekrana yazdirdim. 
+6.Rand() fonksiyonu ile rasgele sayi uretebildim.
+7.Rand() fonksiyonundan uretilen her deger icin onceki degerler ile karsilastirma yaptim
+deger ayni ise sayiyi degistirdim.
+8.Iscilerin rotasyondaki calısmalarini 2 adet dizi icinde sakladim.
+bu sekilde her maksimum iterasyon dolana kadar hangi iscinin nerde calistigi kontrol ediliyor.
+9.Gereksiz islemi onlemek icin kontrolu yapılan sirketlere giris kosulu koydum.
+calisma performansi 2 kat artti.
+
