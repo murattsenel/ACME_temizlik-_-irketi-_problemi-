@@ -9,6 +9,7 @@ int iteration_count =0;
 int iteration =0;              
 int i;
 int j;
+int sirket_kontrol;
 /*her bir sirket icin dizi olusturdum.*/
 int random_kidemli[10];       // rasgele atanan kidemlilerin tutuldugu dizi
 int random_kidemli_tutucu[10];// bir onceki iterasyonda calisan kidemli isciler
@@ -157,9 +158,9 @@ if(iteration_count%3==0)
    }
 
 }
-
+////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////// iscileri rasgele dagıtma
-   
+ sirket_kontrol=0;  
  count_tutucu=0;
  isci_don: 	
 for(count=count_tutucu;count<47;count++)
@@ -192,7 +193,8 @@ if(count==0)
  
  
 /////////////////////////////////////////////////////////////////  A sirketi işçi araması
-
+if(sirket_kontrol==0)
+{
  for(j=0;j<4;j++)
  {
     for(i=0;i<4;i++)
@@ -212,9 +214,11 @@ if(count==0)
         
    }  
 }
-
+sirket_kontrol=4;
+}
 //////////////////////////////////////////////////////////////// B sirketi
-
+if(sirket_kontrol==4)
+{
 for(j=4;j<8;j++)
  {
     for(i=4;i<8;i++)
@@ -234,10 +238,15 @@ for(j=4;j<8;j++)
 	   
    }  
 }
-/////////////////////////////////////////////////////////// C sirketi
-for(j=8;j<14;j++)
+sirket_kontrol=8;
+}
+/////////////////////////////////////////////////////////// C sirketi/////////////////////////////////////////////////////////// C sirketi
+if(sirket_kontrol==8)
+{
+
+for(j=8;j<20;j++)
  {
-    for(i=8;i<14;i++)
+    for(i=8;i<20;i++)
    {
        if(random_isci[i]==random_isci_tutucu1[j])
        {
@@ -249,26 +258,14 @@ for(j=8;j<14;j++)
        	count=count_tutucu;
   	   goto isci_don; 	
        }
-       
+        
    }  
 }
-for(j=14;j<20;j++)
- {
-    for(i=14;i<20;i++)
-   {
-       if(random_isci[i]==random_isci_tutucu1[j])
-       {
-       	count=count_tutucu;
-  	   goto isci_don; 	
-       }
-      if(random_isci[i]==random_isci_tutucu2[j])
-       {
-       	count=count_tutucu;
-  	   goto isci_don; 	
-       }
-       
-   }  
+sirket_kontrol=20;
 }
+ 
+if(sirket_kontrol==20)
+{
 //////////////////////////////////////////// D sirketi
 for(j=20;j<26;j++)
  {
@@ -289,7 +286,11 @@ for(j=20;j<26;j++)
        
    }  
 }
+sirket_kontrol=26;
+}
 /////////////////////////////////////////////////////////// E sirketi
+if(sirket_kontrol==26)
+{
 for(j=26;j<29;j++)
  {
     for(i=26;i<29;i++)
@@ -309,7 +310,11 @@ for(j=26;j<29;j++)
        
    }  
 }
+sirket_kontrol=29;
+}
 ////////////////////////////////////////////////////////// F sirketi
+if(sirket_kontrol==29)
+{
 for(j=29;j<31;j++)
  {
     for(i=29;i<31;i++)
@@ -329,7 +334,11 @@ for(j=29;j<31;j++)
        
    }  
 }
+sirket_kontrol=31;
+}
 ////////////////////////////////////////////////////////// G sirketi
+if(sirket_kontrol==31)
+{
 for(j=31;j<36;j++)
  {
     for(i=31;i<36;i++)
@@ -348,6 +357,8 @@ for(j=31;j<36;j++)
        }
        
    }  
+}
+sirket_kontrol=36;
 }
 //////////////////////////////////////////////////////////// H sirketi
 
